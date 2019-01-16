@@ -27,6 +27,9 @@ class RegistrationPresenter{
             self.delegate.registrationDidFailed(message: "email can't be blank")
             return
 }
+        if password.isEmpty{
+            print("password is empty")
+        }
         
         self.delegate.showProgress()
         DispatchQueue.main.asyncAfter(deadline: .now()+3) {
